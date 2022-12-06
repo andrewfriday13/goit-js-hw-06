@@ -9,7 +9,7 @@ const ingredients = [
 const categoriesEl = document.getElementById('ingredients')
 
 
-ingredients.map((element) => {
+ingredients.map(element => {
 
   const newIndrEl = document.createElement("li")
 
