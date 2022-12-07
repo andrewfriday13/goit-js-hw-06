@@ -13,16 +13,20 @@
 const counterValue = document.getElementById('value').textContent
 console.log(counterValue)
 
+
 const  removeOne = document.getElementById('counter').firstElementChild
 const addOne = document.getElementById('counter').lastElementChild
+const span = document.getElementById('value')
 
-const addListenFirst = removeOne.addEventListener('click', () => {
-    console.log("ролdsdsdsfdsаво")
+
+const addListenFirst = removeOne.addEventListener('click', (event) => {
+  span.textContent = event.currentTarget.value;
+
 
 })
-const addListenSecomd = addOne.addEventListener('click', () => {
-  console.log("ролаво")
+const addListenSecomd = addOne.addEventListener('click', (event) => {
+  span.textContent = event.currentTarget.value;
   
-})
+}) 
 
 
