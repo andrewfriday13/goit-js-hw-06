@@ -10,7 +10,6 @@ let counterValue = 0
 function addFunction(evnt) {
   const add = evnt.currentTarget
    const result = counterValue += 1
-  console.log(counterValue)
   spanId.textContent = result
 
 }
@@ -20,7 +19,6 @@ addOne.addEventListener("click", removeFunction)
 function removeFunction(evnt) { 
   const remove = evnt.currentTarget
     const result = counterValue -= 1
-       console.log(counterValue)
 spanId.textContent = result
 
 }
