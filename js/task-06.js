@@ -10,7 +10,12 @@ function changeColor(evnt) {
 
   if (valueInput == valueEl) {
     inputEl.classList.add("valid")
+        inputEl.classList.remove("invalid")
+
+
   } else {
+        inputEl.classList.remove("valid")
+
     inputEl.classList.add("invalid")
   }
 }
