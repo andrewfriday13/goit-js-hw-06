@@ -1,32 +1,26 @@
-// const addOne = document.getElementById('counter').firstElementChild
-// const removeOne = document.getElementById('counter').lastElementChild
-
-// const addOfNumber = () => {
-//   console.log('прикинь')
-// }
-
-// const addListenOne = addOne.addEventListener('click', addOfNumber)
-// const removeListenOne = removeOne.removeEventListener('click',addOfNumber )
+const addOne = document.getElementById('counter').firstElementChild
+const removeOne = document.getElementById('counter').lastElementChild
+const spanId = document.getElementById('value')
 
 
+let counterValue = 0
 
-const counterValue = document.getElementById('value').textContent
-console.log(counterValue)
+ removeOne.addEventListener("click", addFunction)
 
+function addFunction(evnt) {
+  const add = evnt.currentTarget
+   const result = counterValue += 1
+  console.log(counterValue)
+  spanId.textContent = result
 
-const  removeOne = document.getElementById('counter').firstElementChild
-const addOne = document.getElementById('counter').lastElementChild
-const span = document.getElementById('value')
+}
 
+addOne.addEventListener("click", removeFunction)
 
-const addListenFirst = removeOne.addEventListener('click', (event) => {
-  span.textContent = event.currentTarget.value;
+function removeFunction(evnt) { 
+  const remove = evnt.currentTarget
+    const result = counterValue -= 1
+       console.log(counterValue)
+spanId.textContent = result
 
-x
-})
-const addListenSecomd = addOne.addEventListener('click', (event) => {
-  span.textContent = event.currentTarget.value;
-  
-}) 
-
-
+}
