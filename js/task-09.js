@@ -11,6 +11,8 @@ function chageColor(event) {
 
   const body = document.body
   body.classList.add("color")
-body.backGroundColor = getRandomHexColor()
+  const bodyColor = body.style.backgroundColor = getRandomHexColor()
+  
+  spanColor.textContent = bodyColor
 }
 
