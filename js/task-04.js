@@ -22,7 +22,7 @@ const span = document.getElementById('value')
 const addListenFirst = removeOne.addEventListener('click', (event) => {
   span.textContent = event.currentTarget.value;
 
-
+x
 })
 const addListenSecomd = addOne.addEventListener('click', (event) => {
   span.textContent = event.currentTarget.value;
