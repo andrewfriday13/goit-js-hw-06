@@ -16,9 +16,22 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-const img = images.map(({url, alt}) => {
-  const listImg = gallery.insertAdjacentHTML("beforebegin", `<li><img class="animal__img" src="${url}" alt="${alt}" width= 300> </li> `)
-  // const newImg = document.createElement("img")
+const img = images.map(({ url, alt }) => {
+  const list = document.createElement('li')
+  const newImg = document.createElement('img')
+   newImg.alt = alt
+  newImg.src = url  
+  newImg.width = 300
+  list.append(newImg)
+  console.log(list)
+  // const listImg = gallery.insertAdjacentHTML("beforebegin", `<li><img class="animal__img" src="${url}" alt="${alt}" width= 300> </li> `)
+  
+  return list
+})
+gallery.append(...img)
+
+
+// const newImg = document.createElement("img")
   // newImg.alt = alt
   // newImg.src = url  
   // newImg.width =300
@@ -27,5 +40,3 @@ const img = images.map(({url, alt}) => {
   // listImg.appendChild(newImg)
 
   // gallery.appendChild(listImg) 
-  return listImg
-})

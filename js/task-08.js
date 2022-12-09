@@ -5,19 +5,24 @@ regForm.addEventListener("submit", onRegForm)
 function onRegForm(evnt) {
   evnt.preventDefault()
 
-  const email = regForm.email.value.length
-  const password = regForm.password.value.length
+  const emailEl = regForm.email.value.length
+  const passwordEl = regForm.password.value.length
 
-  if (email <= 0 || password <= 0) {
-    alert("Нічого не забув?")
+   if (emailEl <= 0 || passwordEl <= 0) {
+     alert("Нічого не забув?")
+     
   } else {
-    
-    const formData = new FormData(evnt.currentTarget)
-    regForm.reset()
-    formData.forEach((value, name) => {
-       console.log("name ", name)
-        console.log("value ", value)
-    })
+     const allData = evnt.currentTarget.elements
+     const email = allData.email.value
+     const password = allData.password.value
 
+     const resultAllData = {
+       email,
+       password
+     }
+
+     console.log(resultAllData)
+     regForm.reset()
+   
   }
 }
